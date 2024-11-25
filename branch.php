@@ -35,6 +35,7 @@ if(!function_exists('OP') ){
 /* @var $git UNIT\Git */
 $git      = OP::Unit('Git');
 $git_root = RootPath('git');
+$_branch  = OP::Request('branch') ?? _OP_APP_BRANCH_;
 
 //	...
 $configs = $git->SubmoduleConfig();
@@ -43,7 +44,12 @@ $configs = $git->SubmoduleConfig();
 foreach( $configs as $config ){
 	//	...
 	$path   = $config['path'];
-	$branch = $config['branch'] ?? _OP_APP_BRANCH_;
+	$branch = $config['branch'] ?? null;
+
+	//	...
+	if(!$branch ){
+		$branch = $_branch;
+	}
 
 	//	...
 	chdir($git_root.$path);
