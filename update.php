@@ -92,4 +92,10 @@ foreach($configs as $name => $config){
 
 	//	...
 	$git->Rebase($remote, $branch);
+
+	//	...
+	$follow = $config['follow'] ?? null;
+	if(!$follow ){
+		$follow = _OP_APP_BRANCH_ -1;
+	}
 }
