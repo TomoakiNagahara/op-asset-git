@@ -28,7 +28,7 @@ if(!function_exists('OP') ){
 }
 
 //	...
-foreach( ['type','name','branch'] as $key ){
+foreach( ['type','name'] as $key ){
 	//	...
 	if( empty( OP()->Request($key) ) ){
 		echo "\"{$key}\" was empty: {$usage}";
@@ -40,9 +40,10 @@ foreach( ['type','name','branch'] as $key ){
 $request = OP()->Request();
 $type    = $request['type'];
 $name    = $request['name'];
-$branch  = $request['branch'];
+$branch  = $request['branch'] ?? null;
 $url     = "https://github.com/onepiece-framework/op-{$type}-{$name}.git";
 $path    = "asset/{$type}/{$name}";
+$branch  = $branch ? "-b {$branch}": '';
 
 //	...
-echo "git submodule add --force -b $branch $url $path \n";
+echo "git submodule add --force $branch $url $path \n";
