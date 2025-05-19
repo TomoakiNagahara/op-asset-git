@@ -77,7 +77,7 @@ foreach( $configs as $config ){
 
 	//	...
 	if( $test ){
-		D("git remote rm {$name} {$url}");
+		D("git remote remove {$name}");
 	}else{
 		$git->Remote()->Delete($name, $url);
 	}
