@@ -42,7 +42,7 @@ if(!$name = OP()->Request('name') ){
 
 //	...
 $action = "/www/op/cd2/action.php";
-$config = OP()->MetaPath("asset:/config/cd2-{$name}.php");
+$config = OP()->Path("asset:/config/cd2-{$name}.php");
 $comand = "php {$action} config={$config}";
 
 //	...

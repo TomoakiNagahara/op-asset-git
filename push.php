@@ -47,7 +47,7 @@ $configs = $git->SubmoduleConfig();
 foreach( $configs as $config ){
 	//	...
 	$meta = 'git:/'.$config['path'];
-	$path = OP::MetaPath($meta);
+	$path = OP::Path($meta);
 	if(!chdir($path) ){
 		throw new \Exception("chdir was failed. ({$meta}, {$path})");
 	}
@@ -80,7 +80,7 @@ foreach( $configs as $config ){
 
 //	...
 $meta = 'git:/';
-$path = OP::MetaPath($meta);
+$path = OP::Path($meta);
 if(!chdir($path) ){
 	throw new \Exception("chdir was failed. ({$meta}, {$path})");
 }

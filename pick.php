@@ -47,7 +47,7 @@ if( empty($path) or empty($branch) ){
 }
 
 //	Change directory to request path.
-if(!chdir( $path = OP()->MetaPath("git:/{$path}") )){
+if(!chdir( $path = OP()->Path("git:/{$path}") )){
 	echo "Change directory is failed. path={$path}";
 	exit(__LINE__);
 }

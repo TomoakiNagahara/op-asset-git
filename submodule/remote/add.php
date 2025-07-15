@@ -69,7 +69,7 @@ foreach( $configs as $config ){
 	//	...
 	$url  = $config['url'];
 	$meta = 'git:/'.$config['path'];
-	$path = OP::MetaPath($meta);
+	$path = OP::Path($meta);
 	if(!chdir($path) ){
 		throw new \Exception("chdir was failed. ($path)");
 	}
