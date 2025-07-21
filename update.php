@@ -44,7 +44,7 @@ $git->Remote()->Fetch($remote);
 $git->Rebase($remote, $branch);
 
 //	Get submodule names
-$names = trim(`git config --get-regexp submodule\..*\.active | grep true | sed 's/^submodule\.//;s/\.active true$//'`);
+$names = trim(`git config --get-regexp submodule\..*\.active | grep true | sed 's/^submodule\.//;s/\.active true$//'` ?? '');
 
 //	Generate git submodule config.
 $configs = [];
