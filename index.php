@@ -35,6 +35,8 @@ switch( $command ){
 	case 'update':
 	case 'fetch':
 	case 'pick':
+	case 'submodule/add':
+	case 'submodule/delete':
 		//	...
 		if(!file_exists($path = realpath("./{$command}.php")) ){
 			OP::Html("File does not exists: {$path}");
@@ -57,3 +59,4 @@ switch( $command ){
  * update
  * fetch
  * pick
+ * submodule/add
