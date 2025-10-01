@@ -1,5 +1,5 @@
 <?php
-/** op-skeleton-2020:/asset/git/remote/add.php
+/** op-asset-git:/submodule/remote/add.php
  *
  *  Add remote to all submodules.
  *
@@ -14,8 +14,8 @@
  *
  * @created    2023-02-13
  * @version    1.0
- * @package    op-skeleton-2020
- * @author     Tomoaki Nagahara <tomoaki.nagahara@gmail.com>
+ * @package    op-asset-git
+ * @author     Tomoaki Nagahara
  * @copyright  Tomoaki Nagahara All right reserved.
  */
 

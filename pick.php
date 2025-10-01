@@ -1,12 +1,12 @@
 <?php
-/** op-skeleton-2025:/asset/git/pick.php
+/** op-asset-git:/pick.php
  *
  * Automatically cherry pick.
  *
  * @created    2024-09-15
  * @version    1.0
- * @package    op-skeleton-2025
- * @author     Tomoaki Nagahara <tomoaki.nagahara@gmail.com>
+ * @package    op-asset-git
+ * @author     Tomoaki Nagahara
  * @copyright  Tomoaki Nagahara All right reserved.
  */
 
