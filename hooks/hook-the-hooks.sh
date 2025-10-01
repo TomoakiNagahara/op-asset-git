@@ -3,8 +3,8 @@
 #
 # @created    2024-04-21
 # @version    1.0
-# @package    op-skeleton-2024
-# @author     Tomoaki Nagahara <tomoaki.nagahara@gmail.com>
+# @package    op-asset-git
+# @author     Tomoaki Nagahara
 # @copyright  Tomoaki Nagahara All right reserved.
 
 # Is the hook-the-hooks already running?
