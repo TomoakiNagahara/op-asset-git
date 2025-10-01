@@ -23,3 +23,23 @@ declare(strict_types=1);
  *
  */
 namespace OP;
+
+//	...
+$remote = OP()->Request('remote') ?? 'origin';
+$branch = OP()->Request('branch') ?? '2030';
+D($remote, $branch);
+
+//	...
+D('Core');
+chdir(_ROOT_CORE_);
+`git submodule foreach git pull {$remote} {$branch}`;
+
+//	...
+D('Submodules');
+chdir(_ROOT_GIT_);
+`git submodule foreach git pull {$remote} {$branch}`;
+
+//	...
+D('Skeleton');
+chdir(_ROOT_GIT_);
+`git pull {$remote} {$branch}`;
