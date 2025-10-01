@@ -35,6 +35,7 @@ switch( $command ){
 	case 'update':
 	case 'fetch':
 	case 'pick':
+	case 'pull':
 	case 'submodule/add':
 	case 'submodule/delete':
 	case 'submodule/remote/add':
@@ -60,5 +61,6 @@ switch( $command ){
  * update
  * fetch
  * pick
+ * pull
  * submodule/add
  * submodule/remote/add
