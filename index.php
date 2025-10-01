@@ -19,6 +19,9 @@ declare(strict_types=1);
 namespace OP;
 
 //	...
+OP()->MIME('text/plain');
+
+//	...
 if(!OP::isAdmin() ){
 	OP::Html('Your not admin.');
 	return;
