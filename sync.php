@@ -1,5 +1,5 @@
 <?php
-/** op-skeleton-2020:/asset/git/sync.php
+/** op-asset-git:/sync.php
  *
  * <pre>
  * ```sh
@@ -9,8 +9,8 @@
  *
  * @created    2023-07-21
  * @version    1.0
- * @package    op-skeleton-2020
- * @author     Tomoaki Nagahara <tomoaki.nagahara@gmail.com>
+ * @package    op-asset-git
+ * @author     Tomoaki Nagahara
  * @copyright  Tomoaki Nagahara All right reserved.
  */
 
