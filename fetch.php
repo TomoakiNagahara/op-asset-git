@@ -1,5 +1,5 @@
 <?php
-/** op-skeleton-2020:/asset/git/fetch.php
+/** op-asset-git:/fetch.php
  *
  * Git fetch main repository and submodule repositories.
  *
@@ -11,8 +11,8 @@
  *
  * @created    2023-02-15
  * @version    1.0
- * @package    op-skeleton-2020
- * @author     Tomoaki Nagahara <tomoaki.nagahara@gmail.com>
+ * @package    op-asset-git
+ * @author     Tomoaki Nagahara
  * @copyright  Tomoaki Nagahara All right reserved.
  */
 

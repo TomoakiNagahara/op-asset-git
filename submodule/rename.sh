@@ -1,10 +1,10 @@
 
- ## op-app-skeleton-2020-nep:/asset/git/submodule/rename.sh
+ ## op-asset-git:/submodule/rename.sh
  #
  # @created    ????
  # @version    1.0
- # @package    op-app-skeleton-2020-nep
- # @author     Tomoaki Nagahara <tomoaki.nagahara@gmail.com>
+ # @package    op-asset-git
+ # @author     Tomoaki Nagahara
  # @copyright  Tomoaki Nagahara All right reserved.
  #
 

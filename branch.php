@@ -1,5 +1,5 @@
 <?php
-/**	op-skeleton-2020:/asset/git/branch.php
+/**	op-asset-git:/branch.php
  *
  * Switch to default branch by .gitmodules file.
  *
@@ -11,8 +11,8 @@
  *
  * @created    2023-11-30
  * @version    1.0
- * @package    op-skeleton-2020
- * @author     Tomoaki Nagahara <tomoaki.nagahara@gmail.com>
+ * @package    op-asset-git
+ * @author     Tomoaki Nagahara
  * @copyright  Tomoaki Nagahara All right reserved.
  */
 

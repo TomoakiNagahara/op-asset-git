@@ -1,10 +1,10 @@
 <?php
-/** op-skeleton-2024:/asset/git/submodule/add.php
+/** op-asset-git:/submodule/add.php
  *
  * @created    2024-06-02
  * @version    1.0
- * @package    op-skeleton-2024
- * @author     Tomoaki Nagahara <tomoaki.nagahara@gmail.com>
+ * @package    op-asset-git
+ * @author     Tomoaki Nagahara
  * @copyright  Tomoaki Nagahara All right reserved.
  */
 

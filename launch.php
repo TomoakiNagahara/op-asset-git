@@ -1,10 +1,10 @@
 <?php
-/**	op-skeleton-2020:/asset/git/launch.php
+/**	op-asset-git:/launch.php
  *
  * @created    2024-12-01
  * @version    1.0
- * @package    op-skeleton-2020
- * @author     Tomoaki Nagahara <tomoaki.nagahara@gmail.com>
+ * @package    op-asset-git
+ * @author     Tomoaki Nagahara
  * @copyright  Tomoaki Nagahara All right reserved.
  */
 

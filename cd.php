@@ -1,5 +1,5 @@
 <?php
-/**	op-skeleton-2024:/asset/git/cd.php
+/**	op-asset-git:/cd.php
  *
  * Direct execute code delivery.
  *
@@ -11,8 +11,8 @@
  *
  * @created    2024-11-18
  * @version    1.0
- * @package    op-skeleton-2024
- * @author     Tomoaki Nagahara <tomoaki.nagahara@gmail.com>
+ * @package    op-asset-git
+ * @author     Tomoaki Nagahara
  * @copyright  Tomoaki Nagahara All right reserved.
  */
 

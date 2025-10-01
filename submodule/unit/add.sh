@@ -1,10 +1,10 @@
 
- ## op-skeleton-2020:/asset/git/submodule/unit/add.sh
+ ## op-asset-git:/submodule/unit/add.sh
  #
  # @created    ????
  # @version    1.0
- # @package    op-skeleton-2020
- # @author     Tomoaki Nagahara <tomoaki.nagahara@gmail.com>
+ # @package    op-asset-git
+ # @author     Tomoaki Nagahara
  # @copyright  Tomoaki Nagahara All right reserved.
  #
 

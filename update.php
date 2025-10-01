@@ -1,5 +1,5 @@
 <?php
-/** op-skeleton-2024:/asset/git/update.php
+/** op-asset-git:/update.php
  *
  * Update is fetch and rebase to main and submodule repositories.
  *
@@ -11,8 +11,8 @@
  *
  * @created    2024-08-23
  * @version    1.0
- * @package    op-skeleton-2024
- * @author     Tomoaki Nagahara <tomoaki.nagahara@gmail.com>
+ * @package    op-asset-git
+ * @author     Tomoaki Nagahara
  * @copyright  Tomoaki Nagahara All right reserved.
  */
 
