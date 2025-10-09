@@ -1,1 +1,1 @@
-../unit/ci/.ci.sh
+../.ci.sh
