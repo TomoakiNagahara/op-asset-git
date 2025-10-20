@@ -38,6 +38,7 @@ switch( $command ){
 	case 'pull':
 	case 'submodule/add':
 	case 'submodule/delete':
+	case 'submodule/foreach':
 	case 'submodule/remote/add':
 		//	...
 		if(!file_exists($path = realpath("./{$command}.php")) ){
@@ -63,4 +64,6 @@ switch( $command ){
  * pick
  * pull
  * submodule/add
+ * submodule/delete
+ * submodule/foreach
  * submodule/remote/add
