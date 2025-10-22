@@ -49,9 +49,8 @@ switch( $command ){
 		chdir(_ROOT_GIT_);
 
 		//	...
-		if( include($path) ){
-			return;
-		}
+		include($path);
+		return;
 	break;
 }
 
@@ -67,3 +66,9 @@ switch( $command ){
  * submodule/delete
  * submodule/foreach
  * submodule/remote/add
+
+# Usage
+
+```
+php app.php _develop/git command=pull
+```
