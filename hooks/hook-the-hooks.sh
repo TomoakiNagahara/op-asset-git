@@ -8,7 +8,7 @@
 # @copyright  Tomoaki Nagahara All right reserved.
 
 # Is the hook-the-hooks already running?
-if [ -v HOOK_THE_HOOKS ]; then
+if [ -n "${HOOK_THE_HOOKS:-}" ]; then
 	exit 0;
 fi
 
