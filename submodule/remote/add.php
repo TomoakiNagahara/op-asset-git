@@ -29,10 +29,13 @@ declare(strict_types=1);
  */
 namespace OP;
 
-//  ...
+//	...
+$usage = "\nUsage: php app.php _develop/git command=submodule/remote/add config=.gitmodules_local name=local test=1\n";
+
+//	...
 if(!function_exists('OP') ){
-    echo "Usage: php git.php asset/git/submodule/remote/add.php config=.gitmodules name=upstream display=1 debug=0 test=1\n";
-    exit(__LINE__);
+	echo $usage;
+	return true;
 }
 
 //	...
@@ -44,7 +47,8 @@ $name    = OP::Request('name');
 //	...
 foreach( ['config','name'] as $key ){
 	if( empty(${$key}) ){
-		throw new \Exception("This value is empty. ({$key})");
+		echo $usage;
+		return true;
 	}
 }
 
