@@ -1,5 +1,5 @@
 <?php
-/** op-asset-git:/submodule/remote/add.php
+/**	op-asset-git:/submodule/remote/add.php
  *
  *  Add remote to all submodules.
  *
@@ -19,12 +19,12 @@
  * @copyright  Tomoaki Nagahara All right reserved.
  */
 
-/** Declare strict
+/**	Declare strict
  *
  */
 declare(strict_types=1);
 
-/** namespace
+/**	namespace
  *
  */
 namespace OP;
@@ -38,6 +38,7 @@ if(!function_exists('OP') ){
 	return true;
 }
 
+/*
 //	...
 $display = OP::Request('display') ?? 1;
 $test    = OP::Request('test')    ?? 1;
@@ -61,8 +62,21 @@ if( $test ){
 	$display = $test;
 	D('This is test mode. (test=1)');
 }
+*/
+
+if( OP::Request('config') and OP::Request('name') ){
+	//	OK
+}else{
+	echo $usage;
+	return true;
+} // ...
+
+if( OP::Request('test') > 0 ? true : false ){
+	D('This is test mode: test=1');
+} // ...
 
 /* @var $git UNIT\Git */
+/*
 $git = OP::Unit('Git');
 
 //	...
@@ -91,4 +105,63 @@ foreach( $configs as $config ){
 	}else{
 		$git->Remote()->Add($name, $url);
 	}
+}
+*/
+
+//	Do
+GitSubmoduleRemote( OP()->Path('git:/') );
+
+/**	Add a remote repository to the Git submodules.
+ *
+ */
+function GitSubmoduleRemote( string $git_root )
+{
+	//	Save current dirctory.
+	$current_dir = getcwd();
+
+	//	Change git root.
+	chdir($git_root);
+
+	//	Init
+	$test     = OP::Request('test') > 0 ? true: false;
+	$config   = OP::Request('config');
+	$name     = OP::Request('name');
+	$git_root = getcwd();
+
+	/* @var $git UNIT\Git */
+	$git = OP::Unit('Git');
+
+	//	Get sumodule config.
+	$configs = $git->SubmoduleConfig( OP::Request('config') );
+
+	//	Loop of config.
+	foreach( $configs as $config ){
+		//	...
+		$url  = $config['url'];
+		$path = $config['path'];
+
+		//	...
+		chdir($git_root.'/'.$path);
+
+		//	...
+		if( $git->Remote()->isExists($name) ){
+			D("This remote name is already exists. ({$path})");
+		}else{
+			//	...
+			if( $test ){
+				D("git remote add {$name} {$url}");
+			}else{
+				$git->Remote()->Add($name, $url);
+			}
+		}
+
+		//	...
+		if( $config['submodule'] ?? 0 ){
+			D("Has submodule: $git_root/$path");
+			GitSubmoduleRemote( $git_root.'/'.$path );
+		}
+	}
+
+	//	...
+	chdir($current_dir);
 }
