@@ -41,11 +41,10 @@ if( $foreach = OP()->Request('foreach') ){
 */
 
 define('_FOREACH_' , OP()->Request('foreach')    );
-define('_GIT_ROOT_', OP()->Path('git:/') );
 
 //	...
 if( _FOREACH_ ){
-	if( ChangeDirectory( 'top', _GIT_ROOT_ ) ){
+	if( ChangeDirectory( 'top', _ROOT_GIT_ ) ){
 		return true;
 	}
 }
