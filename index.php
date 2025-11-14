@@ -23,7 +23,7 @@ OP()->MIME('text/plain');
 
 //	...
 if(!OP::isAdmin() ){
-	OP::Html('Your not admin.');
+	OP::Template('404.php');
 	return;
 }
 
